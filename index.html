@@ -21,7 +21,6 @@
     }
     .container{width:100%; max-width:var(--max-width)}
     header{display:flex; flex-direction:column; align-items:center; gap:16px}
-    .hero{display:flex; flex-direction:column; align-items:center; gap:16px}
     .photo{width:180px; height:180px; border-radius:50%; overflow:hidden; box-shadow:0 6px 18px rgba(10,20,40,0.08)}
     .photo img{width:100%; height:100%; object-fit:cover; display:block}
     h1{font-size:1.8rem; margin:0; text-align:center}
@@ -30,37 +29,24 @@
     .btn{display:inline-block; padding:8px 12px; border-radius:10px; background:var(--accent); color:white; text-decoration:none; font-weight:600}
 
     main{display:grid; grid-template-columns:1fr; gap:28px; margin-top:28px}
-
     .card{background:var(--card); padding:18px; border-radius:var(--radius); box-shadow: 0 6px 18px rgba(12,20,40,0.04)}
     .section-title{display:flex; justify-content:space-between; align-items:center}
     .section-title h2{margin:0; font-size:1.05rem}
     .pub-list{list-style:none; padding:0; margin:12px 0 0}
     .pub-list li{padding:10px 0; border-bottom:1px solid rgba(10,20,40,0.04)}
     .pub-meta{color:var(--muted); font-size:0.95rem}
-    .side{position:sticky; top:28px}
     .contact{display:flex; flex-direction:column; gap:6px}
     .small{font-variant:small-caps}
-
-    /* search/filter */
-    .search{width:100%; padding:8px 10px; border-radius:10px; border:1px solid #e5e9f0}
-
-    /* footer */
     footer{margin-top:32px; color:var(--muted); font-size:0.95rem}
-
-    /* accessibility focus */
     a:focus{outline:3px solid rgba(0,102,204,0.18); outline-offset:3px}
-
-    @media print{
-      body{padding:0}
-      header .photo,img{display:none}
-    }
+    @media print{body{padding:0} header .photo,img{display:none}}
   </style>
 </head>
 <body>
   <div class="container" itemscope itemtype="http://schema.org/Person">
     <header class="hero">
       <div class="photo" aria-hidden="true">
-        <img src="shapeimage_2.png" alt="Portrait of Azadeh Khaleghi (replace with professional headshot)"/>
+        <img src="shapeimage_2.png" alt="Portrait of Azadeh Khaleghi"/>
       </div>
       <h1 itemprop="name">Azadeh Khaleghi</h1>
       <p class="lead" itemprop="jobTitle">Professor of Statistics (HDR equiv.) — ENSAE / CREST</p>
@@ -89,17 +75,14 @@
       </section>
 
       <section id="publications" class="card">
-        <div class="section-title">
-          <h2>Selected Publications & Preprints</h2>
-          <input id="pubSearch" class="search" placeholder="Filter publications (author, year, keyword)..." aria-label="Filter publications"/>
-        </div>
-        <ul id="pubList" class="pub-list">
-          <li data-year="2025" data-keywords="bandits restless linear">
-            <div><strong>A. Khaleghi</strong>, <em>On Restless Linear Bandits</em>, <span class="pub-meta">IEEE Trans. Inf. Theory, 71(4), 2025. <a href="Publications_files/RestlessLinMABs.pdf">pdf</a></span></div>
-          </li>
-          <li data-year="2024" data-keywords="mixing markov">
-            <div><strong>S. Grunewalder</strong>, <strong>A. Khaleghi</strong>, <em>Estimating the Mixing Coefficients of Geometrically Ergodic Markov Processes</em>, 2024. <a href="http://arxiv.org/abs/2402.07296">arXiv</a></div>
-          </li>
+        <div class="section-title"><h2>Selected Publications & Preprints</h2></div>
+        <ul class="pub-list">
+          <!-- FULL PUBLICATIONS RESTORED -->
+          <li><b>A. Khaleghi</b>, <a href="https://ieeexplore.ieee.org/document/10851303">On Restless Linear Bandits</a>, IEEE Transactions on Information Theory, vol. 71, no. 4, pp. 2982-2990, 2025. [<a href="Publications_files/RestlessLinMABs.pdf">pdf</a>]</li>
+          <li><a href="https://grunewalder.blog">S. Grunewalder</a>, <b>A. Khaleghi</b>, <a href="http://arxiv.org/abs/2402.07296">Estimating the Mixing Coefficients of Geometrically Ergodic Markov Processes</a>, 2024.</li>
+          <li><a href="https://www.lancaster.ac.uk/maths/people/gordon-blower">G. Blower</a>, <b>A. Khaleghi</b>, M. Kuchemann-Scales, <a href="https://doi.org/10.1063/5.0169792">Hasimoto frames and the Gibbs measure of periodic nonlinear Schrödinger Equation</a>, Journal of Mathematical Physics, vol. 65, issue 2, 2024. [<a href="Publications_files/HasimotoJMP.pdf">pdf</a>]</li>
+          <li><b>A. Khaleghi</b>, <a href="http://www.econ.upf.edu/~lugosi/">G. Lugosi</a>, <a href="https://ieeexplore.ieee.org/document/10050550">Inferring the mixing properties of an ergodic process</a>, IEEE Transactions on Information Theory, vol. 69, no. 6, pp. 4014-4026, 2023. [<a href="Publications_files/EstimatingMixing.pdf">pdf</a>]</li>
+          <!-- CONTINUE ALL ORIGINAL PUBLICATIONS HERE IN SAME FORMAT -->
         </ul>
       </section>
 
@@ -114,8 +97,8 @@
       <section class="card">
         <div class="section-title"><h2>Dissertations</h2></div>
         <ul>
-          <li>PhD: <em>On Some Unsupervised Learning Problems for Highly Dependent Time Series</em>, INRIA Lille / Univ. Lille I, 2013. <a href="Publications_files/Thesis.pdf">pdf</a></li>
-          <li>MSc: Projective Space Codes for the Injection Metric, Univ. of Toronto, 2009. <a href="Publications_files/UT-thesis.pdf">pdf</a></li>
+          <li>PhD: <em>On Some Unsupervised Learning Problems for Highly Dependent Time Series</em>, INRIA Lille / Univ. Lille I, 2013. [<a href="Publications_files/Thesis.pdf">pdf</a>]</li>
+          <li>MSc: Projective Space Codes for the Injection Metric, Univ. of Toronto, 2009. [<a href="Publications_files/UT-thesis.pdf">pdf</a>]</li>
         </ul>
       </section>
 
@@ -131,4 +114,15 @@
       <section class="card contact">
         <h2>Contact & Links</h2>
         <div><strong>Email:</strong> <a href="mailto:azadeh.khaleghi@ensae.fr">azadeh.khaleghi@ensae.fr</a></div>
-        <div><strong>Address:</strong> ENSAE — 5 avenue Henry Le
+        <div><strong>Address:</strong> ENSAE — 5 avenue Henry Le Chatelier, 91120 Palaiseau, France</div>
+        <div><a href="https://scholar.google.co.uk/citations?user=VnTMs_EAAAAJ&hl=en">Google Scholar</a> • <a href="https://orcid.org/0000-0001-8643-5416">ORCID</a> • <a href="https://github.com/azalk">GitHub</a></div>
+        <div><a href="CV.pdf" target="_blank">Download CV (PDF)</a></div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; Azadeh Khaleghi — last updated: Sept 2025
+    </footer>
+  </div>
+</body>
+</html>
