@@ -38,9 +38,39 @@
     footer{margin-top:32px; color:var(--muted); font-size:0.95rem; text-align:center;}
     a:focus{outline:3px solid rgba(0,102,204,0.18); outline-offset:3px;}
     @media print{body{padding:0;} header .photo,img{display:none;}}
+    
+    /* Intro Overlay */
+    #intro-overlay {
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:#ffffff;
+      display:flex; justify-content:center; align-items:center;
+      z-index:1000;
+      flex-direction:column;
+      padding:20px;
+      text-align:center;
+    }
+    #intro-overlay.fade-out {
+      opacity:0;
+      transition: opacity 0.5s ease;
+      pointer-events:none;
+    }
+    #intro-overlay h1 {
+      font-size:2rem; margin-bottom:10px;
+    }
+    #intro-overlay p { margin-bottom:20px; color:var(--muted); font-size:1rem; }
+    #intro-overlay .btn { font-size:1rem; padding:12px 20px; }
   </style>
 </head>
 <body>
+  <!-- Intro Overlay -->
+  <div id="intro-overlay">
+    <h1>About Me</h1>
+    <p id="intro-text"></p>
+    <button class="btn" id="enter-site">Enter Site</button>
+  </div>
+
   <div class="container" itemscope itemtype="http://schema.org/Person">
     <header class="hero">
       <div class="photo" aria-hidden="true">
@@ -68,7 +98,7 @@
         </div>
       </section>
 
-      <!-- Research -->
+      <!-- Notable Awards & Grants -->
       <section class="card">
         <div class="section-title"><h2>Notable Awards & Grants</h2></div>
         <div class="section-content">
@@ -98,8 +128,6 @@
             <li><b>A. Khaleghi</b>, D. Ryabko, <a href="http://www.sciencedirect.com/science/article/pii/S0304397515009470">Nonparametric Multiple Change Point Estimation in Highly Dependent Time Series</a>, Theoretical Computer Science, 620:119-133, 2016. [<a href="Publications_files/P22.pdf">pdf</a>]
               <dl><dd>- A shorter version of this article received <a href="http://www-alg.ist.hokudai.ac.jp/~thomas/ALT13/gold.html">the E.M. Gold best paper Award</a> at the 24th International Conference on Algorithmic Learning Theory.</dd></dl>
             </li>
-            <li><b>A. Khaleghi</b>, D. Ryabko, <a href="http://jmlr.org/proceedings/papers/v32/khaleghi14.html">Asymptotically Consistent Estimation of the Number of Change Points in Highly Dependent Time Series</a>, In Proceedings of the International Conference on Machine Learning, 2014. [<a href="Publications_files/ICML_mce_Clust.pdf">pdf</a>][<a href="https://github.com/azalk/GoChest">code</a>]</li>
-            <li><b>A. Khaleghi</b>, D. Ryabko, <a href="http://papers.nips.cc/paper/4623-locating-changes-in-highly-dependent-data-with-unknown-number-of-change-points">Locating Changes in Highly-Dependent Data with an Unknown Number of Change-Points</a>, In Proceedings of Neural Information Processing Systems, 2012. [<a href="Publications_files/mce_nips.pdf">pdf</a>] [<a href="Publications_files/poster_nips12.pdf">poster</a>][<a href="https://github.com/azalk/GoChest">code</a>]</li>
             <li><b>A. Khaleghi</b>, D. Ryabko, J. Mary, P. Preux, <a href="http://jmlr.csail.mit.edu/proceedings/papers/v22/khaleghi12/khaleghi12.pdf">Online Clustering of Processes</a>, In Proceedings of Artificial Intelligence & Statistics, 2012. [<a href="Publications_files/ocp.pdf">pdf</a>] [<a href="Publications_files/ocp_poster.pdf">poster</a>]</li>
             <li><b>A. Khaleghi</b>, D. Silva, F. R. Kschischang, <a href="https://link.springer.com/chapter/10.1007/978-3-642-10868-6_1">Subspace Codes</a>, Lecture Notes in Computer Science, 2009. [<a href="Publications_files/subspace_1.pdf">pdf</a>]</li>
             <li><b>A. Khaleghi</b>, F. R. Kschischang, <a href="http://dx.doi.org/10.1109/CWIT.2009.5069509">Projective Space Codes for the Injection Metric</a>, In Proceedings of the Canadian Workshop on Information Theory 2009. [<a href="Publications_files/poster.pdf">poster</a>]</li>
@@ -118,7 +146,7 @@
                 <li><i>The <a href="https://github.com/azalk/GoChest">Github repository</a> contains a <b>Go</b> implementation which is also interfaced with <b>Python</b>.</i></li>
               </ul>
             </li>
-            <li><p><a href="https://github.com/azalk/Oblivious">Github repository</a> for the implementation of our Algorithmically Fair Classification and Regression methods proposed in <a href="https://arxiv.org/abs/2002.02901">this paper</a>.</p></li>
+            <li><p><a href="https://github.com/azalk/Oblivious">Github repository</a> for the implementation of Algorithmically Fair Classification and Regression methods proposed in <a href="https://arxiv.org/abs/2002.02901">this paper</a>.</p></li>
           </ul>
         </div>
       </section>
@@ -163,13 +191,34 @@
     </footer>
   </div>
 
-  <!-- Collapsible Sections Script -->
+  <!-- Scripts -->
   <script>
+    // Collapsible sections
     document.querySelectorAll('.section-title').forEach(title => {
       title.addEventListener('click', () => {
         const content = title.nextElementSibling;
         content.classList.toggle('collapsed');
       });
+    });
+
+    // Typing effect for overlay
+    const introString = "Hi! I'm Azadeh Khaleghi, Professor of Statistics. Welcome to my website.";
+    const introText = document.getElementById("intro-text");
+    let idx = 0;
+    function typeWriter() {
+      if(idx < introString.length){
+        introText.innerHTML += introString.charAt(idx);
+        idx++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    window.addEventListener('DOMContentLoaded', typeWriter);
+
+    // Overlay fade-out
+    document.getElementById('enter-site').addEventListener('click', () => {
+      const overlay = document.getElementById('intro-overlay');
+      overlay.classList.add('fade-out');
+      setTimeout(() => overlay.style.display = 'none', 500);
     });
   </script>
 
