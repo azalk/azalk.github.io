@@ -23,7 +23,7 @@
     h1{font-size:1.8rem; text-align:center;}
     p.lead{margin:6px 0 0; color:var(--muted); text-align:center;}
     .meta{display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:10px;}
-    .btn{display:inline-block; padding:10px 16px; border-radius:10px; background:var(--accent); color:white; font-weight:600;}
+    .btn{display:inline-block; padding:10px 16px; border-radius:10px; background:var(--accent); color:white; font-weight:600; cursor:pointer;}
     main{display:grid; grid-template-columns:1fr; gap:28px; margin-top:28px;}
     .card{background:var(--card); padding:20px; border-radius:var(--radius); box-shadow: 0 6px 18px rgba(12,20,40,0.04);}
     .section-title{display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; cursor:pointer;}
@@ -38,8 +38,8 @@
     footer{margin-top:32px; color:var(--muted); font-size:0.95rem; text-align:center;}
     a:focus{outline:3px solid rgba(0,102,204,0.18); outline-offset:3px;}
     @media print{body{padding:0;} header .photo,img{display:none;}}
-    
-    /* Intro Overlay */
+
+    /* Overlay */
     #intro-overlay {
       position: fixed;
       top:0; left:0;
@@ -56,19 +56,28 @@
       transition: opacity 0.5s ease;
       pointer-events:none;
     }
-    #intro-overlay h1 {
-      font-size:2rem; margin-bottom:10px;
-    }
-    #intro-overlay p { margin-bottom:20px; color:var(--muted); font-size:1rem; }
-    #intro-overlay .btn { font-size:1rem; padding:12px 20px; }
+    #intro-overlay .photo{width:180px; height:180px; margin-bottom:16px;}
+    #intro-overlay h1{font-size:2rem; margin-bottom:6px;}
+    #intro-overlay p.lead{margin-bottom:16px;}
+    #intro-overlay .meta{gap:8px;}
+    #intro-overlay .btn{padding:10px 16px;}
   </style>
 </head>
 <body>
   <!-- Intro Overlay -->
   <div id="intro-overlay">
-    <h1>About Me</h1>
-    <p id="intro-text"></p>
-    <button class="btn" id="enter-site">Enter Site</button>
+    <div class="photo">
+      <img src="shapeimage_2.png" alt="Portrait of Azadeh Khaleghi"/>
+    </div>
+    <h1>Azadeh Khaleghi</h1>
+    <p class="lead">Professor of Statistics (HDR equiv.) — <a href="https://www.ensae.fr">ENSAE</a> - <a href="https://crest.science">CREST</a>, IP Paris</p>
+    <div class="meta">
+      <a class="btn" href="#publications">Research</a>
+      <a class="btn" href="#teaching">Teaching</a>
+      <a class="btn" href="#software">Software</a>
+      <a class="btn" href="CV.pdf" target="_blank">Curriculum Vitae</a>
+      <button class="btn" id="enter-site">Enter Site</button>
+    </div>
   </div>
 
   <div class="container" itemscope itemtype="http://schema.org/Person">
@@ -184,6 +193,7 @@
           <div><a href="CV.pdf" target="_blank">Download CV (PDF)</a></div>
         </div>
       </section>
+
     </main>
 
     <footer>
@@ -200,19 +210,6 @@
         content.classList.toggle('collapsed');
       });
     });
-
-    // Typing effect for overlay
-    const introString = "Hi! I'm Azadeh Khaleghi, Professor of Statistics. Welcome to my website.";
-    const introText = document.getElementById("intro-text");
-    let idx = 0;
-    function typeWriter() {
-      if(idx < introString.length){
-        introText.innerHTML += introString.charAt(idx);
-        idx++;
-        setTimeout(typeWriter, 50);
-      }
-    }
-    window.addEventListener('DOMContentLoaded', typeWriter);
 
     // Overlay fade-out
     document.getElementById('enter-site').addEventListener('click', () => {
