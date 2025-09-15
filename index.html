@@ -1,150 +1,134 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-    <STYLE type="text/css">
-        ul, li { margin-bottom: 5px; }
-        body {
-            font-family: optima, verdana, futura, "lucida sans", arial, geneva, helvetica, sans ;
-            font-size: 16px ;
-            max-width:800px;
-            margin: 0px auto;
-            word-wrap: normal
-        }
-    table {
-        font-size: 16px ;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Azadeh Khaleghi — Professor of Statistics</title>
+  <meta name="description" content="Azadeh Khaleghi — Professor of Statistics at ENSAE / CREST. Research: mathematical foundations of statistics, long-memory time series, multi-armed bandits.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --text:#0b1220; --muted:#556076; --accent:#0066cc; --card:#f7f9fc;
+      --max-width:1100px; --radius:12px;
     }
-    </STYLE>
-<style>
-p.small {
-    font-variant: small-caps;
-}
-</style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg); color:var(--text); line-height:1.5; -webkit-font-smoothing:antialiased;
+      padding:28px; display:flex; justify-content:center;
+    }
+    .container{width:100%; max-width:var(--max-width)}
+    header{display:flex; flex-direction:column; align-items:center; gap:16px}
+    .hero{display:flex; flex-direction:column; align-items:center; gap:16px}
+    .photo{width:180px; height:180px; border-radius:50%; overflow:hidden; box-shadow:0 6px 18px rgba(10,20,40,0.08)}
+    .photo img{width:100%; height:100%; object-fit:cover; display:block}
+    h1{font-size:1.8rem; margin:0; text-align:center}
+    p.lead{margin:6px 0 0; color:var(--muted); text-align:center}
+    .meta{display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:10px}
+    .btn{display:inline-block; padding:8px 12px; border-radius:10px; background:var(--accent); color:white; text-decoration:none; font-weight:600}
+
+    main{display:grid; grid-template-columns:1fr; gap:28px; margin-top:28px}
+
+    .card{background:var(--card); padding:18px; border-radius:var(--radius); box-shadow: 0 6px 18px rgba(12,20,40,0.04)}
+    .section-title{display:flex; justify-content:space-between; align-items:center}
+    .section-title h2{margin:0; font-size:1.05rem}
+    .pub-list{list-style:none; padding:0; margin:12px 0 0}
+    .pub-list li{padding:10px 0; border-bottom:1px solid rgba(10,20,40,0.04)}
+    .pub-meta{color:var(--muted); font-size:0.95rem}
+    .side{position:sticky; top:28px}
+    .contact{display:flex; flex-direction:column; gap:6px}
+    .small{font-variant:small-caps}
+
+    /* search/filter */
+    .search{width:100%; padding:8px 10px; border-radius:10px; border:1px solid #e5e9f0}
+
+    /* footer */
+    footer{margin-top:32px; color:var(--muted); font-size:0.95rem}
+
+    /* accessibility focus */
+    a:focus{outline:3px solid rgba(0,102,204,0.18); outline-offset:3px}
+
+    @media print{
+      body{padding:0}
+      header .photo,img{display:none}
+    }
+  </style>
 </head>
 <body>
-<table>
-<h1>Azadeh Khaleghi</h1>
-<td align="justify">
-<p> I am a Professor of Statistics (HDR equiv.) at <a href="https://www.ensae.fr"> École Nationale de la Statistique et de l'Administration Économique (ENSAE)</a> - <a href="https://crest.science">Centre de Recherche en Économie et Statistique (CREST)</a>. 
-My research interests are in the mathematical foundations of Statistics and Machine Learning. My main focus is on devising nonparametric models for long-memory time series and Multi-Armed Bandits. </p>
+  <div class="container" itemscope itemtype="http://schema.org/Person">
+    <header class="hero">
+      <div class="photo" aria-hidden="true">
+        <img src="shapeimage_2.png" alt="Portrait of Azadeh Khaleghi (replace with professional headshot)"/>
+      </div>
+      <h1 itemprop="name">Azadeh Khaleghi</h1>
+      <p class="lead" itemprop="jobTitle">Professor of Statistics (HDR equiv.) — ENSAE / CREST</p>
+      <p class="lead">Research: mathematical foundations of statistics & machine learning — long-memory time series, nonparametric models, restless bandits.</p>
+      <div class="meta">
+        <a class="btn" href="#research">Research</a>
+        <a class="btn" href="#publications">Publications</a>
+        <a class="btn" href="mailto:azadeh.khaleghi@ensae.fr">Email</a>
+      </div>
+    </header>
 
-<div><h2> Contact Details</h2></div>
-<span style="font-size: larger;">azadeh dot khaleghi at ensae dot fr</span><br><br> 
-<span style="font-size: larger;">École Nationale de la Statistique et de l'Administration Économique</span><br>
-5, avenue Henry Le Chatelier 91120 Palaiseau 
-<p class="small"><a href="https://scholar.google.co.uk/citations?user=VnTMs_EAAAAJ&hl=en"><i>Google Scholar</i></a></p>
-</td>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>
-    <a href="IMGLINKTARGET"><img src="shapeimage_2.png" alt="alt text" width="WIDTHpx" height="HEIGHTpx"/></a>&nbsp;</td>
-</table>
+    <main>
+      <section id="about" class="card">
+        <div class="section-title"><h2>About</h2></div>
+        <p itemprop="description">I am a Professor of Statistics at <a href="https://www.ensae.fr">ENSAE</a> and researcher at <a href="https://crest.science">CREST</a>. My work focuses on rigorous nonparametric methods for dependent data and sequential decision problems. I develop theory, algorithms, and open-source software.</p>
+        <p class="small">Available for PhD supervision and collaborations. ORCID: <a href="https://orcid.org/0000-0001-8643-5416">0000-0001-8643-5416</a></p>
+      </section>
 
-<div><h2> Notable Awards & Grants</h2></div>
-    <ul>
-    <p><li> <a href="https://guillaume-lecue.faculty.essec.edu/graph4health">GRAPH4HEALTH</a> ANR Project 2023 - <i> from healthcare accessibility to health outcomes: a stats &amp; ML approach</i></li></p>
-    <p><li> Google Faculty Research Award, 2019/20</li></p>
-    <p><li> London Mathematical Society (LMS) Scheme 4 Grant, 2019 </li></p>
-    <p><li> Adobe Research Grant, 2018</li></p>
-    <p><li> London Mathematical Society (LMS) Scheme 1 Grant, 2017</li></p>
-    <p><li> E.M. Gold Best Paper Award at the 24th International Conference on Algorithmic Learning Theory (ALT), 2013</li></p>
-    </ul>
+      <section id="research" class="card">
+        <div class="section-title"><h2>Current Projects & Grants</h2></div>
+        <ul>
+          <li><strong>GRAPH4HEALTH</strong> — ANR Project (2023): from healthcare accessibility to health outcomes.</li>
+          <li><strong>Google Faculty Research Award</strong> (2019/20)</li>
+          <li>Other grants: LMS, Adobe Research, etc.</li>
+        </ul>
+      </section>
 
-<div ><h2> Selected Publications & Preprints</h1></div>
-<div align="justify">
+      <section id="publications" class="card">
+        <div class="section-title">
+          <h2>Selected Publications & Preprints</h2>
+          <input id="pubSearch" class="search" placeholder="Filter publications (author, year, keyword)..." aria-label="Filter publications"/>
+        </div>
+        <ul id="pubList" class="pub-list">
+          <li data-year="2025" data-keywords="bandits restless linear">
+            <div><strong>A. Khaleghi</strong>, <em>On Restless Linear Bandits</em>, <span class="pub-meta">IEEE Trans. Inf. Theory, 71(4), 2025. <a href="Publications_files/RestlessLinMABs.pdf">pdf</a></span></div>
+          </li>
+          <li data-year="2024" data-keywords="mixing markov">
+            <div><strong>S. Grunewalder</strong>, <strong>A. Khaleghi</strong>, <em>Estimating the Mixing Coefficients of Geometrically Ergodic Markov Processes</em>, 2024. <a href="http://arxiv.org/abs/2402.07296">arXiv</a></div>
+          </li>
+        </ul>
+      </section>
 
-<ul>
-    <li><p><b>A. Khaleghi</b>, <a href="https://ieeexplore.ieee.org/document/10851303"> On Restless Linear Bandits</a>, IEEE Transactions on Information Theory, vol. 71, no. 4, pp. 2982-2990, 2025. [<a title="Publications_files/nstclust.pdf" href="Publications_files/RestlessLinMABs.pdf">pdf</a>] </p> 
-</li> 
-  <li><p><a href="https://grunewalder.blog">S. Gr&uuml;new&auml;lder</a>, <b>A. Khaleghi</b>, <a href="http://arxiv.org/abs/2402.07296"> Estimating the Mixing Coefficients of Geometrically Ergodic Markov Processes</a>, 2024. </p>
-</li> 
-  <li><p> <a href="https://www.lancaster.ac.uk/maths/people/gordon-blower">G. Blower</a>, <b>A. Khaleghi</b>, M. Kuchemann-Scales, <a href="https://doi.org/10.1063/5.0169792">Hasimoto frames and the Gibbs measure of periodic nonlinear Schr&#246;dinger Equation</a>, Journal of Mathematical Physics, vol. 65, issue 2, 2024. [<a title="Publications_files/nstclust.pdf" href="Publications_files/HasimotoJMP.pdf">pdf</a>]</p></li>
-  <li><p> <b>A. Khaleghi</b>, <a href="http://www.econ.upf.edu/~lugosi/">G. Lugosi</a>, <a href="https://ieeexplore.ieee.org/document/10050550">Inferring the mixing properties of an ergodic process</a>, IEEE Transactions on Information Theory, vol. 69, no. 6, pp. 4014-4026, 2023. [<a title="Publications_files/nstclust.pdf" href="Publications_files/EstimatingMixing.pdf">pdf</a>]</p></li> 
-  <li><p><a href="https://grunewalder.blog">S. Gr&uuml;new&auml;lder</a>, <b>A. Khaleghi</b>, <a href="https://www.jmlr.org/papers/volume22/20-1311/20-1311.pdf">Oblivious Data for Fairness with Kernels</a>, Journal of Machine Learning Research, (208): 1-36, 2021. [<a href="https://github.com/azalk/Oblivious.git">code</a>]
-</p>
-<li><p><b>A. Khaleghi</b>, D. Ryabko, <a href="https://ieeexplore.ieee.org/document/9174045">Clustering piecewise stationary processes</a>, In Proceedings of the IEEE International Symposium
-    on Information Theory, 2020.
-[<a title="Publications_files/nstclust.pdf" href="Publications_files/nstclust.pdf">pdf</a>]
-</p></li> 
-<li><p><a href="https://grunewalder.blog">S. Gr&uuml;new&auml;lder</a>, <b>A. Khaleghi</b>, <a href="http://www.jmlr.org/papers/volume20/17-547/17-547.pdf">Approximations of the Restless Bandit Problem</a>, Journal of Machine Learning Research, 20:1-37, 2019. [<a title="Publications_files/mixing_bandits.pdf" href="Publications_files/mixing_bandits.pdf">pdf</a>]</p>
-</li> 
-<li><p><b>A. Khaleghi</b>, D. Ryabko, J. Mary, P. Preux, <a title="http://www.jmlr.org/papers/volume17/khaleghi16a/khaleghi16a.pdf" href="http://www.jmlr.org/papers/volume17/khaleghi16a/khaleghi16a.pdf" class="style_2">Consistent Algorithms for Clustering Time Series</a>, Journal of Machine Learning Research, 17(3):1-32, 2016.
-[<a title="Publications_files/khaleghi16a.pdf" href="Publications_files/khaleghi16a.pdf">pdf</a>]
-</p></li> 
-<li><p><b>A. Khaleghi</b>, D. Ryabko, <a title="http://www.sciencedirect.com/science/article/pii/S0304397515009470" href="http://www.sciencedirect.com/science/article/pii/S0304397515009470" class="style_2">Nonparametric Multiple Change Point Estimation in Highly Dependent Time Series</a>, Theoretical Computer Science, 620:119-133, 2016. 
-[<a title="Publications_files/P22.pdf" href="Publications_files/P22.pdf">pdf</a>]
-<dl>
-<dd>- A shorter version of this article received <a title="http://www-alg.ist.hokudai.ac.jp/~thomas/ALT13/gold.html" href="http://www-alg.ist.hokudai.ac.jp/~thomas/ALT13/gold.html">the E.M. Gold Award for the best paper</a> at the 24th International Conference on Algorithmic Learning Theory.</dd>
-</dl>
-<!--(<i>The conference version of this article <a title="http://www-alg.ist.hokudai.ac.jp/~thomas/ALT13/gold.html" href="http://www-alg.ist.hokudai.ac.jp/~thomas/ALT13/gold.html"> received the E.M. Gold Award for the best paper</a> at the 24th International Conference on Algorithmic Learning Theory.</i>)</p></li>-->
-<li><p><b>A. Khaleghi</b>, D. Ryabko, <a title="http://jmlr.org/proceedings/papers/v32/khaleghi14.html" href="http://jmlr.org/proceedings/papers/v32/khaleghi14.html" class="style_2"> Asymptotically Consistent Estimation of the Number of Change Points in Highly Dependent Time Series</a> In Proceedings of the International Conference on Machine Learning, 2014. [<a title="Publications_files/ICML_mce_Clust.pdf" href="Publications_files/ICML_mce_Clust.pdf">pdf</a>][<a href="https://github.com/azalk/GoChest">code</a>] </p>
-</li>
-<!--<li><p><b>A. Khaleghi</b>, D. Ryabko, <a title="http://link.springer.com/chapter/10.1007/978-3-642-40935-6_27" href="http://link.springer.com/chapter/10.1007/978-3-642-40935-6_27" class="style_2">Nonparametric Change Point Estimation in Highly Dependent Time Series</a>, In Proceedings of Algorithmic Learning Theory (ALT), LNCS 8139, pages 382-396, Singapore, 2013.[<a title="Publications_files/P22.pdf" href="Publications_files/P22.pdf">pdf</a>] (<a title="http://www-alg.ist.hokudai.ac.jp/~thomas/ALT13/gold.html" href="http://www-alg.ist.hokudai.ac.jp/~thomas/ALT13/gold.html">Received the E.M. Gold Award for the best student paper</a>.)</p>
-</li>-->
-<li><p><b>A. Khaleghi</b>, D. Ryabko, <a title="http://papers.nips.cc/paper/4623-locating-changes-in-highly-dependent-data-with-unknown-number-of-change-points" href="http://papers.nips.cc/paper/4623-locating-changes-in-highly-dependent-data-with-unknown-number-of-change-points" class="style_2">Locating Changes in Highly-Dependent Data with an Unknown Number of Change-Points</a>, In Proceedings of Neural Information Processing Systems, 2012. [<a title="Publications_files/mce_nips.pdf" href="Publications_files/mce_nips.pdf">pdf</a>] [<a title="Publications_files/poster_nips12.pdf" href="Publications_files/poster_nips12.pdf">poster</a>][<a href="https://github.com/azalk/GoChest">code</a>]</p>
-</li>
-<li><p><b>A. Khaleghi</b>, D. Ryabko, J. Mary, P. Preux, <a title="http://jmlr.csail.mit.edu/proceedings/papers/v22/khaleghi12/khaleghi12.pdf" href="http://jmlr.csail.mit.edu/proceedings/papers/v22/khaleghi12/khaleghi12.pdf" class="style_2">Online Clustering of Processes</a>, In Proceedings of Artificial Intelligence &amp; Statistics, 2012.[<a title="Publications_files/ocp.pdf" href="Publications_files/ocp.pdf">pdf</a>] [<a title="Publications_files/ocp_poster.pdf" href="Publications_files/ocp_poster.pdf">poster</a>]</p>
-</li>
-  <li><p><b>A. Khaleghi</b>, <a href="https://danilosilva.sites.ufsc.br/index.html">D. Silva</a>, <a href="https://www.comm.utoronto.ca/frank/">F. R. Kschischang</a>, <a title="http://www.springerlink.com/content/87465723623m54mu/?p=cf71630add774246ad79c906bc49e966&amp;pi=3" href="https://link.springer.com/chapter/10.1007/978-3-642-10868-6_1" class="style_2">Subspace Codes</a>, Lecture Notes in Computer Science, 2009. [<a title="Publications_files/subspace_1.pdf" href="Publications_files/subspace_1.pdf">pdf</a>]</p>
-</li>
-  <li><p><b>A. Khaleghi</b>, <a href="https://www.comm.utoronto.ca/frank/">F. R. Kschischang</a>, <a title="http://dx.doi.org/10.1109/CWIT.2009.5069509" href="http://dx.doi.org/10.1109/CWIT.2009.5069509" class="style_2"> Projective Space Codes for the Injection Metric</a>, In Proceedings of the Canadian Workshop on Information Theory 2009. [</span><a title="Publications_files/poster.pdf" href="Publications_files/poster.pdf" style="line-height: 14px; " class="style_6">poster</a><span style="line-height: 14px; " class="style_6">]</p>
-</li>
-</ul>
-</div>
+      <section class="card">
+        <div class="section-title"><h2>Software & Code</h2></div>
+        <ul>
+          <li><strong>RChest / PyChest</strong> — distributional change detection (CRAN & PyPI). <a href="https://github.com/azalk/GoChest">GitHub</a></li>
+          <li><a href="https://github.com/azalk/Oblivious">Oblivious</a> — code for fairness with kernels.</li>
+        </ul>
+      </section>
 
-<div><h2> Software</h2></div>
-<li><b>A. Khaleghi</b>, L. Zierahn, <a href="https://cran.r-project.org/web/packages/RChest/index.html"><i>RChest</i></a> and <a href="https://pypi.org/project/PyChest/"><i>PyChest</i></a>: An <b>R</b> package available on CRAN, (respectively a <b>Python</b> Package available on PyPi) for locating distributional changes in piece-wise stationary timeseries with long-range dependencies, (2021).
-<p><dt> - <i>Corresponding Paper: <b>A. Khaleghi</b>, L. Zierahn, <a href="https://arxiv.org/abs/2112.10565">PyChEst: a Python package for the consistent retrospective estimation of distributional changes in piece-wise stationary time series</a>, arXiv:2112.10565.
-</i></dt>
-</li> 
-<dt> - <i>The <a href="https://github.com/azalk/GoChest">Github repository</a> contains a <b>Go</b> implementation which is also interfaced with <b>Python</b>.</i></dt></ul>
-</ul></p>
-<li><p><a href="https://github.com/azalk/Oblivious">Github repository</a> for the implementation of our Algorithmically Fair Classification and Regression methods proposed in <a href="https://arxiv.org/abs/2002.02901">this paper</a>.</p>
-</li>    
-<div><h2> Dissertations</h2></div>
-<div><pre>
-</pre></div></div>
-<ul>
-<li><p>On Some Unsupervised Learning Problems for Highly Dependent Time Series, PhD Thesis, INRIA Lille -  Universit&eacute; de Lille I, 2013. [<a title="Publications_files/Thesis.pdf" href="Publications_files/Thesis.pdf">pdf</a>]</p>
-</li>
-<li><p>Projective Space Codes for the Injection Metric, MSc Thesis, University of Toronto, 2009. [<a title="Publications_files/UT-thesis.pdf" href="Publications_files/UT-thesis.pdf">pdf</a>]</p>
-</li>
-</ul>
+      <section class="card">
+        <div class="section-title"><h2>Dissertations</h2></div>
+        <ul>
+          <li>PhD: <em>On Some Unsupervised Learning Problems for Highly Dependent Time Series</em>, INRIA Lille / Univ. Lille I, 2013. <a href="Publications_files/Thesis.pdf">pdf</a></li>
+          <li>MSc: Projective Space Codes for the Injection Metric, Univ. of Toronto, 2009. <a href="Publications_files/UT-thesis.pdf">pdf</a></li>
+        </ul>
+      </section>
 
-<div>
-  <h2>Teaching</h2>
-</div>
+      <section class="card">
+        <div class="section-title"><h2>Teaching</h2></div>
+        <ul>
+          <li><strong>ENSAE</strong>: Information Theory for Machine Learning (2025–), Statistics 1 (2022–), Business Data Challenge supervision.</li>
+          <li><strong>École Polytechnique</strong>: Statistiques 2A (2025–).</li>
+          <li><strong>Lancaster University</strong>: Machine Learning, Probability & Stochastic Processes (2015–2022).</li>
+        </ul>
+      </section>
 
-<div class="blockcontent">
-  <ul>
-    <li><strong>ENSAE, France:</strong> Information Theory for Machine Learning (2025--present), Apprentissage Statistique Appliqué (2022--2025), Statistics 1 (2022--present), Business Data Challenge Supervision (2022--present), Séminaire de modélisation statistique (coordinatrice et intervenante) (2022--present)</li>
-    
-    <li><strong>Ecole Polytechnique, France:</strong> Statistiques 2A formation ingénieur (2025--present), 10 séances de PC</li>
-    
-    <li><strong>Lancaster University, UK:</strong> Machine Learning (2016--2022), Probability & Stochastic Processes (2019), Financial Stochastic Processes (2015--2018, 2020--2022), Project Skills (2015--2022), MSc/MSci Supervision (2015--2022)</li>
-  </ul>
-</div>
-
-
-
-</td>
-</tr>
-</table>
-<!-- Default Statcounter code for ENSAE Website
-http://azalk.github.io -->
-<script type="text/javascript">
-var sc_project=12787850; 
-var sc_invisible=1; 
-var sc_security="0d3a0671"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics
-Made Easy - Statcounter" href="https://statcounter.com/"
-target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/12787850/0/0d3a0671/1/"
-alt="Web Analytics Made Easy - Statcounter"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
-</body>
-</html>
+      <section class="card contact">
+        <h2>Contact & Links</h2>
+        <div><strong>Email:</strong> <a href="mailto:azadeh.khaleghi@ensae.fr">azadeh.khaleghi@ensae.fr</a></div>
+        <div><strong>Address:</strong> ENSAE — 5 avenue Henry Le
