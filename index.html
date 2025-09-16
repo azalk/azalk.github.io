@@ -11,230 +11,75 @@
       --max-width:1100px; --radius:12px;
     }
     *{box-sizing:border-box;}
-    html, body{height:100%; margin:0; font-family:optima, verdana, futura, "lucida sans", arial, geneva, helvetica, sans-serif; background:var(--bg); color:var(--text); line-height:1.5; -webkit-font-smoothing:antialiased;}
+    html, body{margin:0; font-family:optima, verdana, futura, "lucida sans", arial, geneva, helvetica, sans-serif; background:var(--bg); color:var(--text); line-height:1.5;}
     a{text-decoration:none; color:var(--accent);}
     a:hover{opacity:0.85;}
-    h1,h2,h3,h4,h5,h6{font-family:optima, verdana, futura, "lucida sans", arial, geneva, helvetica, sans-serif; margin:0;}
+    h1,h2,h3,h4,h5,h6{margin:0;}
     body{padding:28px; display:flex; justify-content:center;}
     .container{width:100%; max-width:var(--max-width);}
     header{display:flex; flex-direction:column; align-items:center; gap:16px;}
-    .photo{width:180px; height:180px; border-radius:50%; overflow:hidden; box-shadow:0 6px 18px rgba(10,20,40,0.08);}
-    .photo img{width:100%; height:100%; object-fit:cover; display:block;}
-    h1{font-size:1.8rem; text-align:center;}
-    p.lead{margin:6px 0 0; color:var(--muted); text-align:center;}
-    .meta{display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:10px;}
+    nav{margin-top:12px; display:flex; flex-wrap:wrap; justify-content:center; gap:12px;}
     .btn{display:inline-block; padding:10px 16px; border-radius:10px; background:var(--accent); color:white; font-weight:600; cursor:pointer;}
     main{display:grid; grid-template-columns:1fr; gap:28px; margin-top:28px;}
     .card{background:var(--card); padding:20px; border-radius:var(--radius); box-shadow: 0 6px 18px rgba(12,20,40,0.04);}
-    .section-title{display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; cursor:pointer;}
-    .section-title h2{font-size:1.1rem;}
-    .section-content{display:block;}
-    .section-content.collapsed{display:none;}
-    .pub-list, .contact ul{list-style:none; padding:0; margin:12px 0 0;}
-    .pub-list li, .contact li{padding:10px 0; border-bottom:1px solid rgba(10,20,40,0.04);}
-    .pub-meta{color:var(--muted); font-size:0.95rem;}
-    .contact{display:flex; flex-direction:column; gap:6px;}
-    .small{font-variant:small-caps;}
     footer{margin-top:32px; color:var(--muted); font-size:0.95rem; text-align:center;}
-    a:focus{outline:3px solid rgba(0,102,204,0.18); outline-offset:3px;}
-    @media print{body{padding:0;} header .photo,img{display:none;}}
-
-    /* Overlay */
-    #intro-overlay {
-      position: fixed;
-      top:0; left:0;
-      width:100%; height:100%;
-      background:#ffffff;
-      display:flex; justify-content:center; align-items:center;
-      z-index:1000;
-      flex-direction:column;
-      padding:20px;
-      text-align:center;
-    }
-    #intro-overlay.fade-out {
-      opacity:0;
-      transition: opacity 0.5s ease;
-      pointer-events:none;
-    }
-    #intro-overlay .photo{width:180px; height:180px; margin-bottom:16px;}
-    #intro-overlay h1{font-size:2rem; margin-bottom:6px;}
-    #intro-overlay p.lead{margin-bottom:16px;}
-    #intro-overlay .meta{gap:8px; flex-wrap:wrap; justify-content:center;}
-    #intro-overlay .btn{padding:10px 16px;}
   </style>
 </head>
 <body>
-  <!-- Intro Overlay -->
-  <div id="intro-overlay">
-    <div class="photo">
-      <img src="shapeimage_2.png" alt="Portrait of Azadeh Khaleghi"/>
-    </div>
-    <h1>Azadeh Khaleghi</h1>
-    <p class="lead">Professor of Statistics (HDR equiv.) — <a href="https://www.ensae.fr">ENSAE</a> - <a href="https://crest.science">CREST</a>, IP Paris</p>
-    <div class="meta">
-      <a class="btn" href="#about">About</a>
-      <a class="btn" href="#publications">Publications</a>
-      <a class="btn" href="#software">Software</a>
-      <a class="btn" href="#teaching">Teaching</a>
-      <a class="btn" href="#contact">Contact</a>
-      <a class="btn" href="CV.pdf" target="_blank">Curriculum Vitae</a>
-    </div>
-  </div>
-
   <div class="container" itemscope itemtype="http://schema.org/Person">
     <header class="hero">
-      <div class="photo" aria-hidden="true">
-        <img src="shapeimage_2.png" alt="Portrait of Azadeh Khaleghi"/>
+      <div class="photo" style="width:160px;height:160px;border-radius:50%;overflow:hidden;box-shadow:0 6px 18px rgba(10,20,40,0.08);">
+        <img src="shapeimage_2.png" alt="Portrait of Azadeh Khaleghi" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <h1 itemprop="name">Azadeh Khaleghi</h1>
-      <p class="lead" itemprop="jobTitle">Professor of Statistics (HDR equiv.) — <a href="https://www.ensae.fr">ENSAE</a> - <a href="https://crest.science">CREST</a>, IP Paris</p>
-      <p class="lead">Research: mathematical foundations of statistics and machine learning, long-memory (stationary ergodic and/or mixing) processes, restless bandits.</p>
-      <div class="meta">
-        <a class="btn" href="#about">About</a>
-        <a class="btn" href="#publications">Publications</a>
-        <a class="btn" href="#software">Software</a>
-        <a class="btn" href="#teaching">Teaching</a>
-        <a class="btn" href="#contact">Contact</a>
+      <p class="lead">Professor of Statistics (HDR equiv.) — 
+        <a href="https://www.ensae.fr">ENSAE</a> - <a href="https://crest.science">CREST</a>, IP Paris
+      </p>
+      <p class="lead">Research: mathematical foundations of statistics and machine learning, long-memory processes, restless bandits.</p>
+
+      <!-- Navigation -->
+      <nav>
+        <a class="btn" href="index.html">About</a>
+        <a class="btn" href="publications.html">Research</a>
+        <a class="btn" href="teaching.html">Teaching</a>
+        <a class="btn" href="software.html">Software</a>
         <a class="btn" href="CV.pdf" target="_blank">Curriculum Vitae</a>
-      </div>
+        <a class="btn" href="mailto:azadeh.khaleghi@ensae.fr">Email</a>
+      </nav>
     </header>
 
     <main>
       <!-- About -->
-      <section id="about" class="card">
-        <div class="section-title"><h2>About</h2></div>
-        <div class="section-content">
-          <p itemprop="description">Azadeh Khaleghi is a Professor of Statistics at <a href="https://www.ensae.fr">ENSAE</a> - <a href="https://crest.science">CREST</a>. She earned her Ph.D. in Mathematics from Université de Lille I & INRIA Lille (France) and holds an M.Sc. and B.Sc. in Electrical and Computer Engineering from the University of Toronto. Her research focuses on the mathematical foundations of statistics and machine learning, emphasizing long-memory and mixing processes. She develops nonparametric methods for estimating mixing coefficients, modelling complex dependencies in time series, and designing sequential learning algorithms robust to long-range dependencies and non-stationarities. Her techniques for understanding dependence in stochastic processes also inform broader areas of statistical learning, including algorithmic fairness.</p>
-          <p class="small">Available for PhD supervision and collaborations. ORCID: <a href="https://orcid.org/0000-0001-8643-5416">0000-0001-8643-5416</a> • Google Scholar: <a href="https://scholar.google.co.uk/citations?user=VnTMs_EAAAAJ&hl=en" target="_blank">Profile</a></p>
-        </div>
+      <section class="card">
+        <h2>About</h2>
+        <p>Azadeh Khaleghi is a Professor of Statistics at <a href="https://www.ensae.fr">ENSAE</a> - <a href="https://crest.science">CREST</a>. She earned her Ph.D. in Mathematics from Université de Lille I & INRIA Lille and holds an M.Sc. and B.Sc. in Electrical and Computer Engineering from the University of Toronto. Her research focuses on the mathematical foundations of statistics and machine learning, emphasizing long-memory and mixing processes.</p>
+        <p class="small">ORCID: <a href="https://orcid.org/0000-0001-8643-5416">0000-0001-8643-5416</a> • <a href="https://scholar.google.co.uk/citations?user=VnTMs_EAAAAJ&hl=en">Google Scholar</a></p>
       </section>
 
-      <!-- Notable Awards & Grants -->
-      <section id="awards" class="card">
-        <div class="section-title"><h2>Notable Awards & Grants</h2></div>
-        <div class="section-content">
-          <ul>
-            <li><strong>GRAPH4HEALTH</strong> — ANR Project (2023): from healthcare accessibility to health outcomes.</li>
-            <li><strong>Google Faculty Research Award</strong> (2019/20)</li>
-            <li><strong>LMS Schemes 1 & 4</strong> (2018 & 19)</li>
-            <li><strong>Adobe Research Award</strong> (2018)</li>
-            <li><strong>E.M. Gold Best Paper Award</strong> 24th International Conference on Algorithmic Learning Theory (ALT), 2013</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Publications -->
-      <section id="publications" class="card">
-        <div class="section-title"><h2>Selected Publications & Preprints</h2></div>
-        <div class="section-content">
-          <ul class="pub-list">
-            <li><b>A. Khaleghi</b>, <a href="https://ieeexplore.ieee.org/document/10851303">On Restless Linear Bandits</a>, IEEE Transactions on Information Theory, vol. 71, no. 4, pp. 2982-2990, 2025. [<a href="Publications_files/RestlessLinMABs.pdf">pdf</a>]</li>
-            <li><a href="https://grunewalder.blog">S. Grunewälder</a>, <b>A. Khaleghi</b>, <a href="http://arxiv.org/abs/2402.07296">Estimating the Mixing Coefficients of Geometrically Ergodic Markov Processes</a>, 2024.</li>
-            <li><a href="https://www.lancaster.ac.uk/maths/people/gordon-blower">G. Blower</a>, <b>A. Khaleghi</b>, M. Kuchemann-Scales, <a href="https://doi.org/10.1063/5.0169792">Hasimoto frames and the Gibbs measure of periodic nonlinear Schrödinger Equation</a>, Journal of Mathematical Physics, vol. 65, issue 2, 2024. [<a href="Publications_files/HasimotoJMP.pdf">pdf</a>]</li>
-            <li><b>A. Khaleghi</b>, G. Lugosi, <a href="https://ieeexplore.ieee.org/document/10050550">Inferring the mixing properties of an ergodic process</a>, IEEE Transactions on Information Theory, vol. 69, no. 6, pp. 4014-4026, 2023. [<a href="Publications_files/EstimatingMixing.pdf">pdf</a>]</li>
-            <li>S. Grunewälder, <b>A. Khaleghi</b>, <a href="https://www.jmlr.org/papers/volume22/20-1311/20-1311.pdf">Oblivious Data for Fairness with Kernels</a>, Journal of Machine Learning Research, (208): 1-36, 2021. [<a href="https://github.com/azalk/Oblivious.git">code</a>]</li>
-            <li><b>A. Khaleghi</b>, D. Ryabko, <a href="https://ieeexplore.ieee.org/document/9174045">Clustering piecewise stationary processes</a>, In Proceedings of the IEEE International Symposium on Information Theory, 2020. [<a href="Publications_files/nstclust.pdf">pdf</a>]</li>
-            <li>S. Grunewälder, <b>A. Khaleghi</b>, <a href="http://www.jmlr.org/papers/volume20/17-547/17-547.pdf">Approximations of the Restless Bandit Problem</a>, Journal of Machine Learning Research, 20:1-37, 2019. [<a href="Publications_files/mixing_bandits.pdf">pdf</a>]</li>
-            <li><b>A. Khaleghi</b>, D. Ryabko, J. Mary, P. Preux, <a href="http://www.jmlr.org/papers/volume17/khaleghi16a/khaleghi16a.pdf">Consistent Algorithms for Clustering Time Series</a>, Journal of Machine Learning Research, 17(3):1-32, 2016. [<a href="Publications_files/khaleghi16a.pdf">pdf</a>]</li>
-            <li><b>A. Khaleghi</b>, D. Ryabko, <a href="http://www.sciencedirect.com/science/article/pii/S0304397515009470">Nonparametric Multiple Change Point Estimation in Highly Dependent Time Series</a>, Theoretical Computer Science, 620:119-133, 2016. [<a href="Publications_files/P22.pdf">pdf</a>]
-              <dl><dd>- A shorter version of this article received <a href="http://www-alg.ist.hokudai.ac.jp/~thomas/ALT13/gold.html">the E.M. Gold best paper Award</a> at the 24th International Conference on Algorithmic Learning Theory.</dd></dl>
-            </li>
-            <li><b>A. Khaleghi</b>, D. Ryabko, J. Mary, P. Preux, <a href="http://jmlr.csail.mit.edu/proceedings/papers/v22/khaleghi12/khaleghi12.pdf">Online Clustering of Processes</a>, In Proceedings of Artificial Intelligence & Statistics, 2012. [<a href="Publications_files/ocp.pdf">pdf</a>] [<a href="Publications_files/ocp_poster.pdf">poster</a>]</li>
-            <li><b>A. Khaleghi</b>, D. Silva, F. R. Kschischang, <a href="https://link.springer.com/chapter/10.1007/978-3-642-10868-6_1">Subspace Codes</a>, Lecture Notes in Computer Science, 2009. [<a href="Publications_files/subspace_1.pdf">pdf</a>]</li>
-            <li><b>A. Khaleghi</b>, F. R. Kschischang, <a href="http://dx.doi.org/10.1109/CWIT.2009.5069509">Projective Space Codes for the Injection Metric</a>, In Proceedings of the Canadian Workshop on Information Theory 2009. [<a href="Publications_files/poster.pdf">poster</a>]</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Software -->
-      <section id="software" class="card">
-        <div class="section-title"><h2>Software & Code</h2></div>
-        <div class="section-content">
-          <ul>
-            <li><b>A. Khaleghi</b>, L. Zierahn, <a href="https://cran.r-project.org/web/packages/RChest/index.html"><i>RChest</i></a> and <a href="https://pypi.org/project/PyChest/"><i>PyChest</i></a>: An <b>R</b> package available on CRAN, (respectively a <b>Python</b> Package available on PyPi) for locating distributional changes in piece-wise stationary timeseries with long-range dependencies, (2021).
-              <ul>
-                <li><i>Corresponding Paper: <b>A. Khaleghi</b>, L. Zierahn, <a href="https://arxiv.org/abs/2112.10565">PyChEst: a Python package for the consistent retrospective estimation of distributional changes in piece-wise stationary time series</a>, arXiv:2112.10565.</i></li>
-                <li><i>The <a href="https://github.com/azalk/GoChest">Github repository</a> contains a <b>Go</b> implementation which is also interfaced with <b>Python</b>.</i></li>
-              </ul>
-            </li>
-            <li><p><a href="https://github.com/azalk/Oblivious">Github repository</a> for the implementation of Algorithmically Fair Classification and Regression methods proposed in <a href="https://arxiv.org/abs/2002.02901">this paper</a>.</p></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Dissertations -->
-      <section id="dissertations" class="card">
-        <div class="section-title"><h2>Dissertations</h2></div>
-        <div class="section-content">
-          <ul>
-            <li>PhD: <em>On Some Unsupervised Learning Problems for Highly Dependent Time Series</em>, INRIA Lille / Univ. Lille I, 2013. [<a href="Publications_files/Thesis.pdf">pdf</a>]</li>
-            <li>MSc: Projective Space Codes for the Injection Metric, Univ. of Toronto, 2009. [<a href="Publications_files/UT-thesis.pdf">pdf</a>]</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Teaching -->
-      <section id="teaching" class="card">
-        <div class="section-title"><h2>Teaching</h2></div>
-        <div class="section-content">
-          <ul>
-            <li><strong>ENSAE</strong>: Information Theory for Machine Learning (2025 – ), Statistics 1 (2022 – ), Apprentissage Statistique Appliqué (2022 - 2025), Business Data Challenge supervision (2022 - ), Séminaire de Modélisation statistique (2022 - ).</li>
-            <li><strong>École Polytechnique</strong>: Statistiques 2A formation ingénieur, 10 séances de PC (2025 – ).</li>
-            <li><strong>Lancaster University</strong>: Machine Learning (2016 - 2022), Stor-i Probability & Stochastic Processes (2019), Financial Stochastic Processes (2015 - 2018, 2020 - 2022), Project Skills (2015 - 2022), MSc/MSci Supervision (2015 - 2022)</li>
-          </ul>
-        </div>
+      <!-- Awards -->
+      <section class="card">
+        <h2>Notable Awards & Grants</h2>
+        <ul>
+          <li><strong>GRAPH4HEALTH</strong> — ANR Project (2023)</li>
+          <li><strong>Google Faculty Research Award</strong> (2019/20)</li>
+          <li><strong>LMS Schemes 1 & 4</strong> (2018 & 19)</li>
+          <li><strong>Adobe Research Award</strong> (2018)</li>
+          <li><strong>E.M. Gold Best Paper Award</strong>, ALT 2013</li>
+        </ul>
       </section>
 
       <!-- Contact -->
-      <section id="contact" class="card contact">
-        <div class="section-title"><h2>Contact & Links</h2></div>
-        <div class="section-content">
-          <div><strong>Email:</strong> <a href="mailto:azadeh.khaleghi@ensae.fr">azadeh.khaleghi@ensae.fr</a></div>
-          <div><strong>Address:</strong> ENSAE — 5 avenue Henry Le Chatelier, 91120 Palaiseau, France</div>
-          <div><a href="https://scholar.google.co.uk/citations?user=VnTMs_EAAAAJ&hl=en">Google Scholar</a> • <a href="https://orcid.org/0000-0001-8643-5416">ORCID</a></div>
-          <div><a href="CV.pdf" target="_blank">Download CV (PDF)</a></div>
-        </div>
+      <section class="card">
+        <h2>Contact & Links</h2>
+        <div><strong>Email:</strong> <a href="mailto:azadeh.khaleghi@ensae.fr">azadeh.khaleghi@ensae.fr</a></div>
+        <div><strong>Address:</strong> ENSAE — 5 avenue Henry Le Chatelier, 91120 Palaiseau, France</div>
+        <div><a href="CV.pdf" target="_blank">Download CV (PDF)</a></div>
       </section>
-
     </main>
 
     <footer>
       &copy; Azadeh Khaleghi — last updated: Sept 2025
     </footer>
   </div>
-
-  <!-- Scripts -->
-  <script>
-    // Collapsible sections
-    document.querySelectorAll('.section-title').forEach(title => {
-      title.addEventListener('click', () => {
-        const content = title.nextElementSibling;
-        content.classList.toggle('collapsed');
-      });
-    });
-
-    // Overlay links scroll to sections and hide overlay
-    document.querySelectorAll('#intro-overlay .btn[href^="#"]').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetElem = document.getElementById(targetId);
-        if (targetElem) {
-          targetElem.scrollIntoView({behavior: 'smooth'});
-        }
-        document.getElementById('intro-overlay').classList.add('fade-out');
-        setTimeout(() => document.getElementById('intro-overlay').style.display = 'none', 500);
-      });
-    });
-  </script>
-
-  <!-- Statcounter code -->
-  <script type="text/javascript">
-  var sc_project=12787850;
-  var sc_invisible=1;
-  var sc_security="0d3a0671";
-  </script>
-  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-  <noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/12787850/0/0d3a0671/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 </body>
 </html>
