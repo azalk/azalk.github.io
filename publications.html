@@ -10,6 +10,8 @@
     body{margin:0;padding:28px;display:flex;justify-content:center;font-family:optima,verdana,sans-serif;background:var(--bg);color:var(--text);}
     .container{width:100%;max-width:var(--max-width);}
     header{display:flex;flex-direction:column;align-items:center;gap:16px;}
+    .photo{width:120px;height:120px;border-radius:50%;overflow:hidden;box-shadow:0 6px 18px rgba(10,20,40,0.08);}
+    .photo img{width:100%;height:100%;object-fit:cover;}
     nav{margin-top:12px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
     .btn{padding:10px 16px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;}
     main{margin-top:28px;display:grid;gap:28px;}
@@ -22,7 +24,14 @@
 <body>
   <div class="container">
     <header>
-      <h1>Selected Publications & Preprints</h1>
+      <div class="photo">
+        <img src="shapeimage_2.png" alt="Portrait of Azadeh Khaleghi">
+      </div>
+      <h1>Azadeh Khaleghi</h1>
+      <p>Professor of Statistics (HDR equiv.) — 
+        <a href="https://www.ensae.fr">ENSAE</a> - 
+        <a href="https://crest.science">CREST</a>, IP Paris
+      </p>
       <nav>
         <a class="btn" href="index.html">About</a>
         <a class="btn" href="publications.html">Research</a>
@@ -34,8 +43,9 @@
 
     <main>
       <section class="card">
+        <h2>Selected Publications & Preprints</h2>
         <ul>
-<li><b>A. Khaleghi</b>, <a href="https://ieeexplore.ieee.org/document/10851303">On Restless Linear Bandits</a>, IEEE Transactions on Information Theory, vol. 71, no. 4, pp. 2982-2990, 2025. [<a href="Publications_files/RestlessLinMABs.pdf">pdf</a>]</li>
+          <li><b>A. Khaleghi</b>, <a href="https://ieeexplore.ieee.org/document/10851303">On Restless Linear Bandits</a>, IEEE Transactions on Information Theory, vol. 71, no. 4, pp. 2982-2990, 2025. [<a href="Publications_files/RestlessLinMABs.pdf">pdf</a>]</li>
             <li><a href="https://grunewalder.blog">S. Grunewälder</a>, <b>A. Khaleghi</b>, <a href="http://arxiv.org/abs/2402.07296">Estimating the Mixing Coefficients of Geometrically Ergodic Markov Processes</a>, 2024.</li>
             <li><a href="https://www.lancaster.ac.uk/maths/people/gordon-blower">G. Blower</a>, <b>A. Khaleghi</b>, M. Kuchemann-Scales, <a href="https://doi.org/10.1063/5.0169792">Hasimoto frames and the Gibbs measure of periodic nonlinear Schrödinger Equation</a>, Journal of Mathematical Physics, vol. 65, issue 2, 2024. [<a href="Publications_files/HasimotoJMP.pdf">pdf</a>]</li>
             <li><b>A. Khaleghi</b>, G. Lugosi, <a href="https://ieeexplore.ieee.org/document/10050550">Inferring the mixing properties of an ergodic process</a>, IEEE Transactions on Information Theory, vol. 69, no. 6, pp. 4014-4026, 2023. [<a href="Publications_files/EstimatingMixing.pdf">pdf</a>]</li>
@@ -51,7 +61,6 @@
             <li><b>A. Khaleghi</b>, D. Ryabko, J. Mary, P. Preux, <a href="http://jmlr.csail.mit.edu/proceedings/papers/v22/khaleghi12/khaleghi12.pdf">Online Clustering of Processes</a>, In Proceedings of Artificial Intelligence & Statistics, 2012. [<a href="Publications_files/ocp.pdf">pdf</a>] [<a href="Publications_files/ocp_poster.pdf">poster</a>]</li>
             <li><b>A. Khaleghi</b>, D. Silva, F. R. Kschischang, <a href="https://link.springer.com/chapter/10.1007/978-3-642-10868-6_1">Subspace Codes</a>, Lecture Notes in Computer Science, 2009. [<a href="Publications_files/subspace_1.pdf">pdf</a>]</li>
             <li><b>A. Khaleghi</b>, F. R. Kschischang, <a href="http://dx.doi.org/10.1109/CWIT.2009.5069509">Projective Space Codes for the Injection Metric</a>, In Proceedings of the Canadian Workshop on Information Theory 2009. [<a href="Publications_files/poster.pdf">poster</a>]</li>
-          </ul>
         </ul>
       </section>
     </main>
@@ -60,3 +69,4 @@
   </div>
 </body>
 </html>
+
